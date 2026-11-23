@@ -13,46 +13,66 @@ body {
   background-color: #f0f9ff;
   color: #1e293b;
   line-height: 1.6;
+  font-size: 15px;
 }
 
 .container {
-  max-width: 960px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 header {
   background: linear-gradient(135deg, #0284c7, #0369a1);
   color: #ffffff;
-  padding: 35px 0 25px;
+  padding: 25px 0 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 32px;
-  margin-bottom: 6px;
+  font-size: 22px;
+  margin-bottom: 4px;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 14px;
   color: #e0f2fe;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.welcome-banner {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul li {
+  width: 100%;
+  max-width: 260px;
 }
 
 nav a {
+  display: block;
   text-decoration: none;
   color: #0369a1;
   background-color: #ffffff;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -65,45 +85,42 @@ nav a:hover {
 }
 
 main {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .card {
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 28px 32px;
-  margin-bottom: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .card h2 {
   color: #0284c7;
-  font-size: 22px;
+  font-size: 19px;
   border-bottom: 2px solid #bae6fd;
   padding-bottom: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .about-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  text-align: center;
+  gap: 16px;
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #0284c7;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 250px;
+  flex-shrink: 0;
 }
 
 .about-text p {
@@ -117,13 +134,15 @@ main {
   border-left: 4px solid #0284c7;
   border-radius: 6px;
   color: #0369a1;
+  font-style: italic;
+  text-align: left;
 }
 
 .skills-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .skills-list li {
@@ -144,21 +163,21 @@ main {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .project-item {
   background-color: #f8fafc;
   border: 1px solid #cbd5e1;
-  padding: 18px;
+  padding: 16px;
   border-radius: 10px;
 }
 
 .project-item h3 {
   color: #0f172a;
   font-size: 17px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project-item p {
@@ -166,10 +185,146 @@ main {
   font-size: 14px;
 }
 
+.rate-info {
+  margin-bottom: 14px;
+  color: #334155;
+}
+
+.estimate-box {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-left: 5px solid #0284c7;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.estimate-box p {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.estimate-box p:last-child {
+  margin-bottom: 0;
+}
+
+.total-price {
+  color: #0369a1;
+  font-size: 18px;
+}
+
+.btn-calculate {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-calculate:hover {
+  background-color: #0369a1;
+}
+
 footer {
   background-color: #0f172a;
   color: #cbd5e1;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  padding: 18px 12px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 32px 0 26px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  .card {
+    padding: 26px 30px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 25px;
+  }
+
+  .profile-img {
+    width: 145px;
+    height: 145px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  header {
+    padding: 28px 0;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .welcome-banner {
+    margin-bottom: 0;
+  }
+
+  .profile-img {
+    width: 165px;
+    height: 165px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

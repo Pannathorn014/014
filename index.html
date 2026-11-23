@@ -8,14 +8,18 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1>My Developer Portfolio</h1>
-        <p class="subtitle">ปัณณธร ทองเรือง (เจมส์) | นักพัฒนาเว็บไซต์มือใหม่</p>
+      <div class="container header-container">
+        <div class="brand">
+          <h1>My Developer Portfolio</h1>
+          <p class="subtitle">ปัณณธร ทองเรือง (เจมส์) | นักพัฒนาเว็บไซต์มือใหม่</p>
+          <p id="welcome-message" class="welcome-banner"></p>
+        </div>
         <nav>
           <ul>
-            <li><a href="#about">เกี่ยวกับฉัน (About Me)</a></li>
-            <li><a href="#skills">ทักษะ (Skills)</a></li>
-            <li><a href="#projects">ผลงาน (Projects)</a></li>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">ผลงาน</a></li>
+            <li><a href="#estimator">ประมาณการราคา</a></li>
           </ul>
         </nav>
       </div>
@@ -34,7 +38,9 @@
               <strong>แนะนำตัว:</strong> สวัสดีครับ ผมสนใจในการพัฒนาเว็บไซต์และการเขียนโปรแกรม
               กำลังฝึกฝนทักษะด้าน Front-End เพื่อสร้างเว็บไซต์ที่ใช้งานง่ายและสวยงามครับ
             </p>
-            <p class="motto"><em>"ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"</em></p>
+            <blockquote class="motto">
+              "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"
+            </blockquote>
           </div>
         </div>
       </section>
@@ -64,26 +70,40 @@
       <section id="projects" class="card">
         <h2>ผลงาน (Projects)</h2>
         <div class="projects-grid">
-          <div class="project-item">
+          <article class="project-item">
             <h3>1. เว็บไซต์แนะนำตัวเอง (My Developer Profile)</h3>
             <p>
               เว็บไซต์แนะนำข้อมูลส่วนตัว คติประจำใจ และปุ่มทักทายแบบโต้ตอบได้
               พัฒนาด้วย HTML, CSS และ JavaScript ผ่านโปรแกรม Visual Studio Code
             </p>
-          </div>
-          <div class="project-item">
+          </article>
+          <article class="project-item">
             <h3>2. เว็บไซต์พอร์ตโฟลิโอนักพัฒนา (My Developer Portfolio)</h3>
             <p>
               เว็บไซต์รวบรวมประวัติส่วนตัว ทักษะ และผลงาน จัดแบ่งโครงสร้างเนื้อหาด้วย Semantic HTML
-              พร้อมระบบเมนูนำทางเชื่อมไปยังแต่ละส่วนของหน้าเว็บ
+              พร้อมระบบเมนูนำทางและรองรับ Responsive Web Design
             </p>
-          </div>
+          </article>
         </div>
+      </section>
+
+      <section id="estimator" class="card">
+        <h2>ประมาณการค่าบริการพัฒนาเว็บไซต์ (Website Cost Estimator)</h2>
+        <p class="rate-info">อัตราค่าบริการพัฒนาเว็บไซต์: <strong>หน้าละ 500 บาท</strong></p>
+        <div class="estimate-box">
+          <p>จำนวนหน้าที่ต้องการ: <strong id="display-pages">0</strong> หน้า</p>
+          <p class="total-price">ค่าบริการรวมทั้งหมด: <strong id="display-total">0</strong> บาท</p>
+        </div>
+        <button type="button" id="recalculate-btn" class="btn-calculate">
+          คำนวณค่าบริการใหม่
+        </button>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 ปัณณธร ทองเรือง (68219010014) | My Developer Portfolio</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
